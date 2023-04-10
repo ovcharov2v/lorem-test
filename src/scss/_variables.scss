@@ -1,9 +1,12 @@
+$min-width: 320px;
+
 // Colors
 $color-black: #000;
 $color-white: #fff;
 $color-blue: #3E9CDC;
 $color-blue-light: #43ABF0;
 $color-blue-dark: #286690;
+$color-transparent: rgba(#000, 0);
 
 // Fonts
 $font-primary: "Lato", sans-serif;
@@ -12,9 +15,5 @@ $font-primary: "Lato", sans-serif;
 $transition-default: .2s ease;
 
 // Breakpoints
-$desktop: 1025;
-$desktop-xl: 1800;
-$laptop: 1440;
-$tablet: 768;
-$mobile: 320;
-$desktop-vh: 750;
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 640px;

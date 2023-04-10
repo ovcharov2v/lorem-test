@@ -1,31 +1,62 @@
 .section-hero {
-	padding-top: 204px;
-	padding-bottom: 203px;
+	padding-top: 125px;
+	padding-bottom: 40px;
 	background-image: url('../images/hero-bg.jpg');
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
+
+	@media (min-width: $breakpoint-tablet) {
+		padding-top: 160px;
+		padding-bottom: 160px;
+	}
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 204px;
+		padding-bottom: 203px;
+	}
+
 
 	&__content { // .section-hero__content
 		max-width: 800px;
 	}
 
 	&__title { // .section-hero__title
-		margin-bottom: 88px;
+		margin-bottom: 40px;
+
+		@media (min-width: $breakpoint-tablet) {
+			margin-bottom: 60px;
+		}
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 88px;
+		}
 	}
 
 	&__text { // .section-hero__text
 		margin-bottom: 10px;
-		font-size: 20px;
-		line-height: 24px;
+		font-size: 18px;
+		line-height: 22px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-tablet) {
+			font-size: 20px;
+			line-height: 24px;}
 	}
 
 	&__list { // .section-hero__list
-		margin-bottom: 80px;
-		font-size: 20px;
+		margin-bottom: 40px;
+		font-size: 18px;
 		line-height: 24px;
 		list-style-type: none;
+
+		@media (min-width: $breakpoint-tablet) {
+			margin-bottom: 60px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 80px;
+		}
 	}
 
 	&__list-elem { // .section-hero__list-elem
@@ -45,12 +76,19 @@
 	}
 
 	&__buttons-box { // .section-hero__buttons-box
-		display: flex;
-		column-gap: 30px;
+		@media (min-width: $breakpoint-tablet) {
+			display: flex;
+			column-gap: 30px;
+		}
 	}
 
 	&__button { // .section-hero__button
 		width: 100%;
-		max-width: 183px;
+		margin-bottom: 20px;
+
+		@media (min-width: $breakpoint-tablet) {
+			max-width: 183px;
+			margin-bottom: 0;
+		}
 	}
 }

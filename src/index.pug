@@ -24,6 +24,9 @@ block content
 						a.header__nav-link(href="#") Цены
 					li.header__nav-elem
 						a.header__nav-link(href="#") Оформить заказ
+			button.header__menu-toggle(aria-label="Мобильное меню")
+				include images/sprites/svg/icon-burger.svg
+				include images/sprites/svg/icon-cross.svg
 	// Page content
 	main
 		// Section Hero
@@ -34,7 +37,7 @@ block content
 						span.text-blue Lorem ipsum
 						|
 						|
-						| dolor sit amet consectetur
+						| dolor sit amet consectetur
 						|
 						|
 						span.text-blue adipiscing
@@ -111,7 +114,7 @@ block content
 		footer.footer
 			.container
 				.footer__row
-					p.footer__group © 2018 «LOREMIPSUM.NET» Все права защищены.
+					p.footer__group.footer__group--copy © 2018 «LOREMIPSUM.NET» Все права защищены.
 					.footer__group.footer__group--payment
 						.footer__elem
 							+svg("icon-qiwi")(class="footer__elem-icon")
