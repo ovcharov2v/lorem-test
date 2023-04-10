@@ -1,25 +1,19 @@
-// stylelint-disable scss/dollar-variable-empty-line-before
+$min-width: 320px;
 
-// COLORS
+// Colors
 $color-black: #000;
 $color-white: #fff;
-$color-gray: #eee;
+$color-blue: #3E9CDC;
+$color-blue-light: #43ABF0;
+$color-blue-dark: #286690;
+$color-transparent: rgba(#000, 0);
 
-// FONTS
-// stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+// Fonts
+$font-primary: "Lato", sans-serif;
 
-// EASING TRANSITIONS
-$duration-normal: 0.4s;
-$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
-$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
-$easing-out: ease-out;
-$easing-in: ease-in;
+// Transitions
+$transition-default: .2s ease;
 
-// Settings
-$desktop: 1025;
-$desktop-xl: 1800;
-$laptop: 1440;
-$tablet: 768;
-$mobile: 320;
-$desktop-vh: 750;
+// Breakpoints
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 640px;

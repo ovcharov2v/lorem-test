@@ -4,16 +4,133 @@ prepend vars
 	//-
 
 append vars
-	//-
+	-
+		title="Lorem test"
+		meta.description="Lorem test"
 
 block content
-	//- include pug/data
+	// Header
+	header.header
+		.container.header__container
+			a.header__logo-link(href="#")
+				img.header__logo-img(src="images/logo.svg", alt="Logo")
+			nav.header__nav
+				ul.header__nav-list
+					li.header__nav-elem
+						a.header__nav-link.header__nav-link--active(href="#") Бизнес
+					li.header__nav-elem
+						a.header__nav-link(href="#") О нас
+					li.header__nav-elem
+						a.header__nav-link(href="#") Цены
+					li.header__nav-elem
+						a.header__nav-link(href="#") Оформить заказ
+			button.header__menu-toggle(aria-label="Мобильное меню")
+				include images/sprites/svg/icon-burger.svg
+				include images/sprites/svg/icon-cross.svg
+	// Page content
+	main
+		// Section Hero
+		section.section-hero
+			.container
+				.section-hero__content
+					h1.heading1.section-hero__title
+						span.text-blue Lorem ipsum
+						|
+						|
+						| dolor sit amet consectetur
+						|
+						|
+						span.text-blue adipiscing
+					p.section-hero__text At vero eos et accusamus et iusto odio dignissimos ducimus!
+					ul.section-hero__list
+						li.section-hero__list-elem Totam rem aperiam eaque ipsa
+						li.section-hero__list-elem Sit voluptatem accusantium doloremque laudantium
+						li.section-hero__list-elem Sed ut perspiciatis, unde omnis iste natus error
+					.section-hero__buttons-box
+						a.button.button--blue.section-hero__button(href="#") Заказать
+						a.button.button--white.section-hero__button(href="#") Подробнее
+		// Section Order
+		section.section-order
+			.container
+				h2.heading2.section-order__title Оформление  Заказа
+				p.section-order__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
+				.section-order__schema
+					// Elem
+					figure.section-order__schema-elem
+						.section-order__icon-box
+							+svg("icon-loupe")(class="section-order__icon")
+						figcaption Lorem ipsum dolor sit amet
+					// Elem
+					figure.section-order__schema-elem
+						.section-order__icon-box
+							+svg("icon-percent")(class="section-order__icon")
+						figcaption Сonsecteturadipiscing elit
+					// Elem
+					figure.section-order__schema-elem
+						.section-order__icon-box
+							+svg("icon-doc-plus")(class="section-order__icon")
+						figcaption Sed do eiusmod tempor
+					// Elem
+					figure.section-order__schema-elem
+						.section-order__icon-box
+							+svg("icon-envelope")(class="section-order__icon")
+						figcaption Esse cillum dolore eu fugiat
+					// Elem
+					figure.section-order__schema-elem
+						.section-order__icon-box
+							+svg("icon-cash")(class="section-order__icon")
+						figcaption Excepteur sint occaecat cupidatat non proident
+				form.section-order__form(action="#")
+					.input-select
+						.input-select__value-box
+							input.input.input-select__value(type="text", name="type", placeholder="Выберите тип системы", disabled)
+							include images/sprites/svg/chevron-up.svg
+						.input-select__list-box
+							ul.input-select__list
+								li.input-select__option(data-value="Sed ut perspiciatis") Sed ut perspiciatis
+								li.input-select__option(data-value="Nemo enim ipsam") Nemo enim ipsam
+								li.input-select__option(data-value="Et harum quidem") Et harum quidem
+								li.input-select__option(data-value="Temporibus autem") Temporibus autem
+								li.input-select__option(data-value="Itaque earum rerum") Itaque earum rerum
+								li.input-select__option(data-value="Sed ut perspiciatis") Sed ut perspiciatis
+								li.input-select__option(data-value="Nemo enim ipsam") Nemo enim ipsam
+								li.input-select__option(data-value="Et harum quidem") Et harum quidem
+								li.input-select__option(data-value="Temporibus autem") Temporibus autem
+								li.input-select__option(data-value="Itaque earum rerum") Itaque earum rerum
+					input.input(type="email", name="email", placeholder="Ваш e-mail")
+					input.input(type="text", name="name", placeholder="Ваше имя")
+					.input-range.section-order__form-range
+						label.input-range__label(for="range") Sed ut perspiciatis, unde omnis iste natus
+							span.input-range__value-box
+								span.input-range__value 75
+								|%
+						input#range.input-range__field(type="range", min="0", max="100", value="75", name="range")
+					label.button.button--white.button--lg.button--file.input-file
+						input.input-file__field(type="file", name="file")
+						include images/sprites/svg/icon-doc.svg
+						span Прикрепить файл
+					button.button.button--blue.button--submit.section-order__form-submit(type="submit") Отправить
+		// Footer
+		footer.footer
+			.container
+				.footer__row
+					p.footer__group.footer__group--copy © 2018 «LOREMIPSUM.NET» Все права защищены.
+					.footer__group.footer__group--payment
+						.footer__elem
+							+svg("icon-qiwi")(class="footer__elem-icon")
+							| Qiwi wallet
+						.footer__elem
+							+svg("icon-yandex-money")(class="footer__elem-icon")
+							| Yandex Money
+						.footer__elem
+							+svg("icon-web-money")(class="footer__elem-icon")
+							| Web Money
+					.footer__group
+						a(href="mailto:info@ipsum228.com").footer__elem
+							+svg("icon-envelope-blue")(class="footer__elem-icon")
+							| info@ipsum228.com
+						a(href="https://vk.com", target="_blank").footer__elem
+							+svg("icon-vkontakte")(class="footer__elem-icon")
+							| Мы вконтакте
 
-	//- .site
-	//- 	include pug/components/header
 
-	//- 	include pug/pages/home
-
-	//- 	include pug/components/footer
-
-	//- include pug/components/analytics
