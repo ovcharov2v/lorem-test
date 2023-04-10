@@ -1,0 +1,66 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 13px 30px 12px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	transition: color $transition-default, background-color $transition-default, border-color $transition-default;
+
+	&--blue { // .button--blue
+		background-color: $color-blue;
+		color: $color-white;
+		border-color: $color-white;
+
+		&:hover {
+			background-color: $color-blue-dark;
+			border-color: $color-blue-dark;
+		}
+	}
+
+	&--white { // .button--white
+		background-color: $color-white;
+		color: #2A2B30;
+		border-color: #6F6D7B;
+
+		&:hover {
+			background-color: $color-blue-dark;
+			color: $color-white;
+			border-color: $color-white;
+		}
+	}
+
+	&--submit { // .button--submit
+		padding-top: 14px;
+		padding-bottom: 14px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 600;
+	}
+
+	&--file { // .button--file
+		border-width: 2px;
+		border-color: $color-blue;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 600;
+
+		&:hover {
+			border-color: $color-blue-dark;
+		}
+	}
+
+	&__icon { // .button__icon
+		display: block;
+		width: 20px;
+		height: 22px;
+		margin-right: 10px;
+		transform: translateY(-2px);
+	}
+}
