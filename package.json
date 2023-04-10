@@ -2,9 +2,11 @@
 	"name": "ninelines-template",
 	"version": "3.0.4",
 	"description": "Шаблон для разработки сайтов",
-	"repository": "ninelines-team/ninelines-template",
+	"repository": "https://github.com/ovcharov2v/lorem-test",
 	"scripts": {
-		"dev": "gulp",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"start": "gulp",
 		"build": "gulp build"
 	},
 	"author": "Ninelines Agency <info@ninelines.agency>",
@@ -68,6 +70,7 @@
 		"@babel/runtime": "7.14.8",
 		"body-scroll-lock": "3.1.5",
 		"core-js": "3.15.2",
+		"gh-pages": "5.0.0",
 		"husky": "7.0.1",
 		"jquery": "3.6.0",
 		"lozad": "1.16.0",
